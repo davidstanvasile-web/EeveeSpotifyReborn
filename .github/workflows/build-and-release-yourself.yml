@@ -1,7 +1,3 @@
-runs-on: ubuntu-latest                   
-    VAR_ONE: "8"
-    VAR_TWO: "27"
-
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -21,7 +17,7 @@ on:
         required: true
         type: string
 
-env:
+
   SWIFTPROTOBUF_VERSION: "1.29.0"
 
 jobs:
