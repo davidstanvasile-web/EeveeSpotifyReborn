@@ -1,28 +1,3 @@
-name: update-node-versions
-on:
-  schedule:
-    - cron: "30 7 * * 0" # Runs every Sunday at 7:30 AM
-  workflow_dispatch: # Allows manual triggering
-
-jobs:
-  update-node-versions:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: hongaar/update-node-versions@v2
-        with:
-          versions: |
-            21
-          versions.filter-eol: true
-          updaters.workflows: true
-          updaters.engines: true
-      - uses: peter-evans/create-pull-request@v5
-        with:
-          title: "feat: update node.js to v21"
-          body: |
-            Automated changes by [update-node-versions](https://github.com/hongaar/update-node-versions) GitHub action
-            BREAKING CHANGE: This updates the supported node.js versions
-          token: ${{ secrets.GH_PAT }}   
 name: Create IPA Packages
 
 on:
