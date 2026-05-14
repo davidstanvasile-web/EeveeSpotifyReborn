@@ -1,9 +1,9 @@
-# CORRECT SYNTAX
+
 job_name:
   runs-on: ubuntu-latest
-  env:                    # Single 'env' block
-    VAR_ONE: "value"
-    VAR_TWO: "value"
+  env:                    
+    VAR_ONE: "8"
+    VAR_TWO: "27"
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
