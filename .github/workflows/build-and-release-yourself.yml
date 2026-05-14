@@ -1,6 +1,4 @@
-
-job_name:
-  runs-on: ubuntu-latest
+runs-on: ubuntu-latest
   env:                    
     VAR_ONE: "8"
     VAR_TWO: "27"
