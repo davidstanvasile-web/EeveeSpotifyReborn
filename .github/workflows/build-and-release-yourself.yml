@@ -1,5 +1,4 @@
-runs-on: ubuntu-latest
-  env:                    
+runs-on: ubuntu-latest                   
     VAR_ONE: "8"
     VAR_TWO: "27"
 
