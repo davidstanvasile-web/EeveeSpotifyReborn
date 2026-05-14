@@ -19,16 +19,16 @@ env:
 
 jobs:
   build:
-    runs-on: macos-latest
-    env:
-      THEOS: ${{ github.workspace }}/theos
-
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [21] # Updated to Node.js 21
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: maxim-lobanov/setup-xcode@v1
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          xcode-version: '16.2.0'
+          node-version: ${{ matrix.node-version }}   
 
       - name: Hide Sensitive Inputs
         uses: levibostian/action-hide-sensitive-inputs@v1
